@@ -1627,3 +1627,51 @@ Received Import Request.
 Start importing Assets/01_Prefabs/Skunk.prefab using Guid(d205b6e73e036304b963d98ccb4f145d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffeb5a1d008379817c5600f247ae5e64') in 0.014845 seconds
   Import took 0.018217 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000742 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.111 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1095 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.7 MB.
+System memory in use after: 61.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1700.
+Total: 2.435500 ms (FindLiveObjects: 0.304300 ms CreateObjectMapping: 0.082400 ms MarkObjects: 1.948300 ms  DeleteObjects: 0.098700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1449.089015 seconds.
+  path: Assets/04_Scenes/scene_Andrew.unity
+  artifactKey: Guid(0ad70bf319d8f9c4a82757b6b455e3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/04_Scenes/scene_Andrew.unity using Guid(0ad70bf319d8f9c4a82757b6b455e3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d9e6f8a91f9055cd2e0c67614d2c35') in 0.014467 seconds
+  Import took 0.017543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.785822 seconds.
+  path: Assets/04_Scenes/scene_Andrew.unity
+  artifactKey: Guid(0ad70bf319d8f9c4a82757b6b455e3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/04_Scenes/scene_Andrew.unity using Guid(0ad70bf319d8f9c4a82757b6b455e3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da50fcc9ecc59d5ed3545eb3c22012f4') in 0.004092 seconds
+  Import took 0.008065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.617525 seconds.
+  path: Assets/04_Scenes/scene_Andrew
+  artifactKey: Guid(76bf5b296737732498c20be19cefe4d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/04_Scenes/scene_Andrew using Guid(76bf5b296737732498c20be19cefe4d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5a813c2c66106875a9db69fce963dda') in 0.002911 seconds
+  Import took 0.006189 seconds .
+
