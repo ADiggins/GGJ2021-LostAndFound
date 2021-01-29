@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shower
+  - Performance
   layers:
   - Default
   - TransparentFX

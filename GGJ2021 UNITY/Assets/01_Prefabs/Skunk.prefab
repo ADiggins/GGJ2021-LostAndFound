@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 7380888314360924877}
   - component: {fileID: 7380888314360924879}
   - component: {fileID: 7380888314360924878}
+  - component: {fileID: 3771261872297025682}
   m_Layer: 0
   m_Name: Skunk
   m_TagString: Untagged
@@ -342,6 +343,19 @@ MonoBehaviour:
   sensitivity: 90
   cameraClampMin: -10
   cameraClampMax: 10
+--- !u!114 &3771261872297025682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7380888314360924876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7312d25fe10d7904793c5958d76f37a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 101
 --- !u!1 &7380888314367874253
 GameObject:
   m_ObjectHideFlags: 0
