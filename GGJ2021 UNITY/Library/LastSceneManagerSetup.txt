@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/04_Scenes/scene_Luke.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
