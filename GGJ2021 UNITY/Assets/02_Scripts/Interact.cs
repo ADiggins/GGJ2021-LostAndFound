@@ -32,7 +32,6 @@ public class Interact : MonoBehaviour
 
                 else
                 {
-					other.GetComponent<Shower_Script>().noShampoo();
                 }
 
 			}

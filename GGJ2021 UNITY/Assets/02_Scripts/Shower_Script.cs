@@ -8,28 +8,32 @@ public class Shower_Script : MonoBehaviour
     public Animation Shower_anim;
     public AudioSource Shower_sound;
     public GameObject Player;
+    public GameObject Shampoo;
 
     //Public Function for triggering sound effects and animation.
     public void triggerShower()
     {
-        //Shower_anim = GetComponent<Animation>();
-        //foreach (AnimationState state in Shower_anim)
-        //{
-        //   state.speed = 1f;
-        //}
+        if (Shampoo.GetComponent<Shampoo_Script>().shampoo == true)
+        {
+            //Shower_anim = GetComponent<Animation>();
+            //foreach (AnimationState state in Shower_anim)
+            //{
+            //   state.speed = 1f;
+            //}
 
-        //Shower_sound.Play();
+            //Shower_sound.Play();
 
-        //Take charm for successful action
-        Player.GetComponent<StarTracker>().AddStars();
+            //Take charm for successful action
+            Player.GetComponent<StarTracker>().AddStars();
 
-        //Destroy the script so action cant be played twice
-        Destroy(this);
-    }
+            //Destroy the script so action cant be played twice
+            Destroy(this);
+        }
 
-    public void noShampoo()
-    {
-        Debug.Log("No Shampoo");
-        //More to do here with text on the UI
+        else
+        {
+            Debug.Log("No Shampoo");
+            //More to do here with text on the UI
+        }
     }
 }
