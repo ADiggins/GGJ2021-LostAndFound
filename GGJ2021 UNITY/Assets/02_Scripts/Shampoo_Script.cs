@@ -32,7 +32,10 @@ public class Shampoo_Script : MonoBehaviour
 
         //Destory script so only happens once
         GetComponent<BoxCollider>().enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
 
         Marker.GetComponent<Quest_Marker>().disappear();
+
+        
     }
 }
