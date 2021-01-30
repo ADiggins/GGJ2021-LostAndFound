@@ -5,12 +5,21 @@ using UnityEngine;
 public class StarTracker : MonoBehaviour
 {
 	public float currentStars, maxStars, starWorth;
-    
+	private ParticleTrigger pt;
+
+	public void Awake()
+	{
+		if (GetComponentInChildren<ParticleTrigger>())
+			pt = GetComponentInChildren<ParticleTrigger>();
+	}
+
 	public void AddStars()
 	{
 		currentStars += starWorth;
 		if (currentStars > maxStars)
 			currentStars = maxStars;
+		if (pt != null)
+			pt.Fire();
 		//TODO: Trigger progress UI animation
 	}
 
