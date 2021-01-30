@@ -8823,8 +8823,112 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 119483340}
     - target: {fileID: 285837157712197467, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 615683530659803085, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_Name
+      value: ChangeEffectDizzy
+      objectReference: {fileID: 0}
+    - target: {fileID: 615683530659803085, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250055290529066796, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914609401674573931, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: starCount
+      value: 
+      objectReference: {fileID: 1409839995}
+    - target: {fileID: 1914609402044485936, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2329766053514363353, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_Name
+      value: DizzyStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 2329766053675321159, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2329766054043549212, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: starCount
+      value: 
+      objectReference: {fileID: 1582095126}
+    - target: {fileID: 2329766054043549214, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_text
+      value: 10/10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902955578850871115, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_Name
+      value: ChangeEffectEdwina
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902955578850871115, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143482111655016795, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566246640097775331, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566246640097775331, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.8
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673411351526024806, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_Name
+      value: ChangeEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673411351526024806, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360293019345722093, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_text
+      value: 10/10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360293019345722095, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: starCount
+      value: 
+      objectReference: {fileID: 1225814700}
+    - target: {fileID: 5360293019445109684, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387952652631959314, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387952652631959314, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923622863421153062, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_Name
+      value: ChangeEffectBoris
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923622863421153062, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878906879500635038, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878906879500635038, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894184104548486111, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
