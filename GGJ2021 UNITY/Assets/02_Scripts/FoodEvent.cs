@@ -9,7 +9,9 @@ public class FoodEvent : MonoBehaviour
 
 	public void TriggerFood()
 	{
-		targetDog.GoToBowl();
+		if (triggered)
+			return;
 		triggered = true;
+		targetDog.GoToBowl();
 	}
 }

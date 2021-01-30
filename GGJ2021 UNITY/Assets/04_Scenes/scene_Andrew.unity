@@ -265,7 +265,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &269887827
 Transform:
@@ -275,8 +275,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269887826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1903, z: -0.78}
-  m_LocalScale: {x: 0.11911, y: 3.380764, z: 1.6573473}
+  m_LocalPosition: {x: 0, y: 1.1903, z: -0.971}
+  m_LocalScale: {x: 0.11911, y: 3.380764, z: 2.0394497}
   m_Children: []
   m_Father: {fileID: 996869037}
   m_RootOrder: 0
@@ -640,8 +640,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.8121371, y: 1, z: 3.8726234}
-  m_Center: {x: 0, y: 0, z: 1.4363117}
+  m_Size: {x: 6.885025, y: 2.1259804, z: 4.0219}
+  m_Center: {x: 0.060112, y: 0.5629904, z: 1.5109501}
 --- !u!114 &774635773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,6 +760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 996869037}
+  - component: {fileID: 996869038}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -782,6 +783,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &996869038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996869036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74681f6d30dffdd48b01f8cdaf820e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!1 &1178987149
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1000,7 @@ GameObject:
   - component: {fileID: 1218784848}
   - component: {fileID: 1218784852}
   - component: {fileID: 1218784853}
+  - component: {fileID: 1218784854}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -1106,6 +1121,21 @@ MonoBehaviour:
   journeyLength: 10
   triggered: 0
   bowl: {fileID: 774635767}
+--- !u!114 &1218784854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218784847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1ac247e5249e54faad842355a91482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStars: 10
+  maxStars: 10
+  starWorth: 5
 --- !u!1 &1402045790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,8 +1321,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447626338}
   m_LocalRotation: {x: -0, y: 0.000000923872, z: -0, w: 1}
-  m_LocalPosition: {x: -25.0437, y: -0.2987, z: -17.03}
-  m_LocalScale: {x: 10.0951185, y: 5.077496, z: 1}
+  m_LocalPosition: {x: -25.2119, y: -0.2987, z: -17.03}
+  m_LocalScale: {x: 9.758917, y: 5.077496, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -1356,6 +1386,7 @@ GameObject:
   - component: {fileID: 1740542603}
   - component: {fileID: 1740542602}
   - component: {fileID: 1740542601}
+  - component: {fileID: 1740542605}
   m_Layer: 0
   m_Name: Kitchen Floor
   m_TagString: Untagged
@@ -1439,6 +1470,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1740542605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740542600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74681f6d30dffdd48b01f8cdaf820e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!1 &2136153581
 GameObject:
   m_ObjectHideFlags: 0
