@@ -30,6 +30,6 @@ public class Shampoo_Script : MonoBehaviour
         //Shampoo_sound.Play();
 
         //Destory script so only happens once
-        Destroy(this);
+        GetComponent<BoxCollider>().enabled = false;
     }
 }

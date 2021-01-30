@@ -1482,6 +1482,7 @@ MonoBehaviour:
   Shower_anim: {fileID: 0}
   Shower_sound: {fileID: 0}
   Player: {fileID: 119483338}
+  Shampoo: {fileID: 1529871320}
 --- !u!65 &461262030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4491,7 +4492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1ac247e5249e54faad842355a91482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStars: 11
+  currentStars: 10
   maxStars: 10
   starWorth: 4
 --- !u!114 &1225814701
@@ -5760,6 +5761,7 @@ GameObject:
   - component: {fileID: 1529871324}
   - component: {fileID: 1529871323}
   - component: {fileID: 1529871322}
+  - component: {fileID: 1529871326}
   m_Layer: 0
   m_Name: Shampoo
   m_TagString: Shampoo
@@ -5858,6 +5860,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529871320}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1529871326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529871320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab15e1f74327f934fb65210f691d0960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPromptUI: {fileID: 1330261569}
+  promptText: Shampoo. Pick up with E
+  interactKeyCode: 101
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1529871323}
+        m_TargetAssemblyTypeName: Shampoo_Script, Assembly-CSharp
+        m_MethodName: triggerShampoo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1556560744
 GameObject:
   m_ObjectHideFlags: 0
@@ -8636,7 +8668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 285837156422763630, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 76.900024
+      value: 76.90015
       objectReference: {fileID: 0}
     - target: {fileID: 285837156539869985, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8656,7 +8688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 285837156584251721, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -42.9
+      value: -42.899902
       objectReference: {fileID: 0}
     - target: {fileID: 285837156606231448, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
       propertyPath: m_Pivot.x
