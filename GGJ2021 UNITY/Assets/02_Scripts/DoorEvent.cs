@@ -32,10 +32,13 @@ public class DoorEvent : MonoBehaviour
 	public void TriggerDoorEvent()
 	{
 		if (dogIn)
+		{
 			triggered = true;
+			dogObj.GetComponent<StarTracker>().LoseStars();
+		}
 		else
 			print("Get the dog inside first!");
-		dogObj.GetComponent<StarTracker>().LoseStars();
+		
 	}
 
 	private void OnTriggerEnter(Collider other)
