@@ -4,6 +4,10 @@ public class TrainingExerciseExecutor : MonoBehaviour
 {
     public bool Succeeded { get; private set; }
     public bool Failed { get; private set; }
+
+    [SerializeField]
+    private ProgressBar progressBar;
+
     private TrainingExercise exercise;
     private float startTime;
     private float timeProgress;
@@ -32,5 +36,7 @@ public class TrainingExerciseExecutor : MonoBehaviour
         {
             Succeeded = true;
         }
+
+        progressBar.SetCompletion(1 - Mathf.Max(0, timeProgress / exercise.Duration));
     }
 }
