@@ -52,7 +52,7 @@ public class Interact : MonoBehaviour
 			}
 			if (other.transform.tag == "Food")
 			{
-				//trigger food event
+				other.GetComponent<FoodEvent>().TriggerFood();
 			}
 			if (other.transform.tag == "Door")
 			{
