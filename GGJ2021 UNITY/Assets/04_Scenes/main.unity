@@ -2961,7 +2961,7 @@ PrefabInstance:
       objectReference: {fileID: 388773981}
     - target: {fileID: 1942766239503421207, guid: 2524b4a103dae0c4eadbec715108d540, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.48
+      value: -24.6
       objectReference: {fileID: 0}
     - target: {fileID: 1942766239503421207, guid: 2524b4a103dae0c4eadbec715108d540, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2981,7 +2981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1942766239503421207, guid: 2524b4a103dae0c4eadbec715108d540, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -24.21
+      value: -56.3
       objectReference: {fileID: 0}
     - target: {fileID: 1942766239503421207, guid: 2524b4a103dae0c4eadbec715108d540, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4494,7 +4494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStars: 10
   maxStars: 10
-  starWorth: 4
+  starWorth: 5
 --- !u!114 &1225814701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6067,7 +6067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStars: 10
   maxStars: 10
-  starWorth: 2
+  starWorth: 5
 --- !u!1 &1618444200
 GameObject:
   m_ObjectHideFlags: 0
@@ -6477,7 +6477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7380888314360924877, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.21
+      value: -56.3
       objectReference: {fileID: 0}
     - target: {fileID: 7380888314360924877, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6485,7 +6485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7380888314360924877, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.48
+      value: -29.6
       objectReference: {fileID: 0}
     - target: {fileID: 7380888314360924877, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7420,9 +7420,9 @@ MonoBehaviour:
   edwinaTracker: {fileID: 1225814700}
   dizzyTracker: {fileID: 1582095126}
   playerStarVictoryCount: 10
-  borisStarVictoryCount: 5
-  edwinaStarVictoryCount: 7
-  dizzyStarVictoryCount: 8
+  borisStarVictoryCount: 9
+  edwinaStarVictoryCount: 9
+  dizzyStarVictoryCount: 9
 --- !u!4 &1902797032
 Transform:
   m_ObjectHideFlags: 0
