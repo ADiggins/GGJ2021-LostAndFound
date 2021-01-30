@@ -11,15 +11,14 @@ public class Stink_Script : MonoBehaviour
     //Public Function for triggering sound effects and animation.
     public void triggerStink()
     {
-        Debug.Log("Triggered");
-        Stink_anim = GetComponent<Animation>();
-        if (Stink_anim != null)
-        {
-            foreach (AnimationState state in Stink_anim)
-            {
-                state.speed = 1f;
-            }
-        }
+        //Stink_anim = GetComponent<Animation>();
+        //if (Stink_anim != null)
+        //{
+        //    foreach (AnimationState state in Stink_anim)
+        //    {
+        //        state.speed = 1f;
+        //    }
+        //}
 
         if (Stink_sound != null)
         {

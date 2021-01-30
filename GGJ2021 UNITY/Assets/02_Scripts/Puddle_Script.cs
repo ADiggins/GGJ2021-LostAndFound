@@ -12,13 +12,13 @@ public class Puddle_Script : MonoBehaviour
     //Public Function for triggering sound effects and animation.
     public void triggerPuddle()
     {
-        Puddle_anim = GetComponent<Animation>();
-        foreach (AnimationState state in Puddle_anim)
-        {
-            state.speed = 1f;
-        }
+        //Puddle_anim = GetComponent<Animation>();
+        //foreach (AnimationState state in Puddle_anim)
+        //{
+        //    state.speed = 1f;
+        //}
 
-        Puddle_sound.Play();
+        //Puddle_sound.Play();
 
         //Destroy the script so action cant be played twice
         Destroy(this);

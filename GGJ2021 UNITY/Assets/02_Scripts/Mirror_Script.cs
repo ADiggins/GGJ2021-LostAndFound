@@ -12,13 +12,13 @@ public class Mirror_Script : MonoBehaviour
     //Public Function for triggering sound effects and animation.
     public void triggerMirror()
     {
-        Mirror_anim = GetComponent<Animation>();
-        foreach (AnimationState state in Mirror_anim)
-        {
-            state.speed = 1f;
-        }
+        //Mirror_anim = GetComponent<Animation>();
+        //foreach (AnimationState state in Mirror_anim)
+        //{
+        //    state.speed = 1f;
+        //}
 
-        Mirror_sound.Play();
+        //Mirror_sound.Play();
 
         //Add Stars for successful action
         Player.GetComponent<StarTracker>().AddStars();

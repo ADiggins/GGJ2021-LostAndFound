@@ -12,14 +12,13 @@ public class Shower_Script : MonoBehaviour
     //Public Function for triggering sound effects and animation.
     public void triggerShower()
     {
-        Debug.Log("Triggered");
-        Shower_anim = GetComponent<Animation>();
-        foreach (AnimationState state in Shower_anim)
-        {
-            state.speed = 1f;
-        }
+        //Shower_anim = GetComponent<Animation>();
+        //foreach (AnimationState state in Shower_anim)
+        //{
+        //   state.speed = 1f;
+        //}
 
-        Shower_sound.Play();
+        //Shower_sound.Play();
 
         //Take charm for successful action
         Player.GetComponent<StarTracker>().AddStars();

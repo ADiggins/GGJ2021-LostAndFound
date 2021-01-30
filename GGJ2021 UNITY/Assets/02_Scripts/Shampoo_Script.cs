@@ -21,13 +21,13 @@ public class Shampoo_Script : MonoBehaviour
         //Set shampoo as being taken
         shampoo = true;
 
-        Shampoo_Anim = GetComponent<Animation>();
-        foreach (AnimationState state in Shampoo_Anim)
-        {
-            state.speed = 1f;
-        }
+        //Shampoo_Anim = GetComponent<Animation>();
+        //foreach (AnimationState state in Shampoo_Anim)
+        //{
+        //    state.speed = 1f;
+        //}
 
-        Shampoo_sound.Play();
+        //Shampoo_sound.Play();
 
         //Destory script so only happens once
         Destroy(this);

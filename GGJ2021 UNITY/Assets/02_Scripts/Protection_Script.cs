@@ -12,13 +12,13 @@ public class Protection_Script : MonoBehaviour
     //Public Function for triggering sound effects and animation.
     public void triggerProtection()
     {
-        Stink_anim = GetComponent<Animation>();
-        foreach (AnimationState state in Stink_anim)
-        {
-            state.speed = 1f;
-        }
+        //Stink_anim = GetComponent<Animation>();
+        //foreach (AnimationState state in Stink_anim)
+        //{
+        //    state.speed = 1f;
+        //}
 
-        Stink_sound.Play();
+        //Stink_sound.Play();
 
         //Add charm for successful action
         Player.GetComponent<StarTracker>().AddStars();
