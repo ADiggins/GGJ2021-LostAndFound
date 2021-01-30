@@ -17,6 +17,7 @@ public class StarCountUI : MonoBehaviour
     private void Start()
     {
         starCount.OnStarValueChange += UpdateStarUI;
+        UpdateStarUI((int)starCount.currentStars);
     }
 
     private void UpdateStarUI(int numStars)
