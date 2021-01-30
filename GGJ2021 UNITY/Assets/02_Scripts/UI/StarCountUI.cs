@@ -14,9 +14,13 @@ public class StarCountUI : MonoBehaviour
         text = GetComponent<TMP_Text>();
     }
 
-    private void Update()
+    private void Start()
     {
-        text.text = ((int)starCount.currentStars).ToString() + "/10";
+        starCount.OnStarValueChange += UpdateStarUI;
     }
 
+    private void UpdateStarUI(int numStars)
+    {
+        text.text = numStars.ToString() + "/10";
+    }
 }
