@@ -29,6 +29,8 @@ public class AllTasksCompletedListener : MonoBehaviour
     [SerializeField]
     private int dizzyStarVictoryCount;
 
+    //Gameobject for activating victory
+    public GameObject Victory;
 
     private void Start()
     {
@@ -55,7 +57,7 @@ public class AllTasksCompletedListener : MonoBehaviour
 
     private void DoVictory()
     {
-        Debug.Log("All tasks completed");
+        Victory.GetComponent<End_Zone>().finished = true;
     }
 
 }

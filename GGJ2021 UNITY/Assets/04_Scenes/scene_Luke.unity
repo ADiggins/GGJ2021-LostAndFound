@@ -716,6 +716,7 @@ MonoBehaviour:
   Mirror_anim: {fileID: 0}
   Mirror_sound: {fileID: 0}
   Player: {fileID: 1641892784}
+  Marker: {fileID: 0}
 --- !u!65 &220743086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4944,6 +4945,7 @@ MonoBehaviour:
   Stink_anim: {fileID: 0}
   Stink_sound: {fileID: 0}
   Player: {fileID: 1641892784}
+  Marker: {fileID: 0}
 --- !u!1 &1435047715
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,6 +5837,95 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7380888314360924876, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
   m_PrefabInstance: {fileID: 1641892783}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1647530597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647530601}
+  - component: {fileID: 1647530600}
+  - component: {fileID: 1647530599}
+  - component: {fileID: 1647530598}
+  m_Layer: 0
+  m_Name: End Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1647530598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647530597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd6999a87df0ef4fba825d15d20ac6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finished: 0
+--- !u!114 &1647530599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647530597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab15e1f74327f934fb65210f691d0960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPromptUI: {fileID: 0}
+  promptText: Press E to get Adopted
+  interactKeyCode: 101
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1647530598}
+        m_TargetAssemblyTypeName: End_Script, Assembly-CSharp
+        m_MethodName: Finish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &1647530600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647530597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.0804825, y: 1, z: 7.0788903}
+  m_Center: {x: -0.038394928, y: 0, z: -0.3401277}
+--- !u!4 &1647530601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647530597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 45.2, y: 65.97, z: 42.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1681296772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,6 +6262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stink_anim: {fileID: 0}
   Stink_sound: {fileID: 0}
+  Marker: {fileID: 0}
 --- !u!65 &1816758161
 BoxCollider:
   m_ObjectHideFlags: 0

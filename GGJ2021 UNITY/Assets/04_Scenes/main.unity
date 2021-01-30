@@ -448,6 +448,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1ac247e5249e54faad842355a91482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &119483343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119483338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e12636a52eedf4dacaf3598b40d711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPromptUI: {fileID: 1330261569}
 --- !u!1001 &148110926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -921,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6168756979186055684, guid: 8a6ba1f9305d93948b415bd00d6be8f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0000803
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 6168756979186055684, guid: 8a6ba1f9305d93948b415bd00d6be8f7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1088,7 +1101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321587146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -181.9818, y: 221.83, z: 43.5084}
+  m_LocalPosition: {x: -181.9818, y: 221.72, z: 43.5084}
   m_LocalScale: {x: 32.08686, y: 1, z: 48.166885}
   m_Children: []
   m_Father: {fileID: 1962025211}
@@ -6707,6 +6720,96 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618444200}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1634281676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1634281680}
+  - component: {fileID: 1634281679}
+  - component: {fileID: 1634281678}
+  - component: {fileID: 1634281677}
+  m_Layer: 0
+  m_Name: End Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1634281677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634281676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3499eab005af649b5ed3682c715c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finished: 0
+  Player: {fileID: 119483338}
+--- !u!114 &1634281678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634281676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab15e1f74327f934fb65210f691d0960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPromptUI: {fileID: 1330261569}
+  promptText: Press E to be adopted
+  interactKeyCode: 101
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1634281677}
+        m_TargetAssemblyTypeName: End_Zone, Assembly-CSharp
+        m_MethodName: Finish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &1634281679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634281676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.448372, y: 1, z: 14.957466}
+  m_Center: {x: -2.6425514, y: 0, z: 0.79475784}
+--- !u!4 &1634281680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634281676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -96.03, y: 0.25, z: 39.74142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694733448
 GameObject:
   m_ObjectHideFlags: 0
@@ -7192,7 +7295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743322434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -278.4474, y: 222.54, z: 38.4515}
+  m_LocalPosition: {x: -278.4474, y: 222.43, z: 38.4515}
   m_LocalScale: {x: 39.364407, y: 1, z: 39.5176}
   m_Children: []
   m_Father: {fileID: 40621936}
@@ -8047,6 +8150,7 @@ MonoBehaviour:
   borisStarVictoryCount: 9
   edwinaStarVictoryCount: 9
   dizzyStarVictoryCount: 9
+  Victory: {fileID: 1634281676}
 --- !u!4 &1902797032
 Transform:
   m_ObjectHideFlags: 0
