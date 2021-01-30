@@ -24,8 +24,11 @@ public class InteractionTrigger : MonoBehaviour
         {
             return;
         }
-        isPlayerInTrigger = other.gameObject.IsPlayer();
-        playerPromptUI.DisplayPrompt(promptText);
+        if (other.gameObject.IsPlayer())
+        {
+            isPlayerInTrigger = true;
+            playerPromptUI.DisplayPrompt(promptText);
+        }
     }
 
     private void OnTriggerExit(Collider other)
