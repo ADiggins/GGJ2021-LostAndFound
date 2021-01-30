@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class PerformanceZone : MonoBehaviour
 {
-	[SerializeField]
-	private bool triggered = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public bool triggered = false;
+	public GameObject playerObj;
 
 	public void triggerPerformanceZone()
 	{
 		if (triggered)
 			return;
 		triggered = true;
+		playerObj.GetComponent<StarTracker>().AddStars();
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.transform.tag == "Player")
+			triggerPerformanceZone();
 	}
 }

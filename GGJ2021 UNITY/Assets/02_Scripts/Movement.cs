@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
 	private void FixedUpdate()
 	{
 		rb.velocity = forwardVector + (transform.up * rb.velocity.y);
+		//rb.angularVelocity = new Vector3(0, 100, 0);
 	}
 
 	// Update is called once per frame

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorEvent : MonoBehaviour
 {
 	public bool triggered, dogIn;
-	public GameObject dogObj;
+	public GameObject dogObj, playerObj;
 
 	private float yRot;
 	private GameObject doorPivot;
@@ -31,10 +31,11 @@ public class DoorEvent : MonoBehaviour
 
 	public void TriggerDoorEvent()
 	{
-		if (dogIn) 
+		if (dogIn)
 			triggered = true;
-		//TODO: Else don't close the door and report to the player.
-		//Correct Dog stars
+		else
+			print("Get the dog inside first!");
+		dogObj.GetComponent<StarTracker>().LoseStars();
 	}
 
 	private void OnTriggerEnter(Collider other)
