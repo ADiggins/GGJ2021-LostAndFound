@@ -5,10 +5,11 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
 	public KeyCode interactKey;
+	public GameObject Shampoo;
     // Start is called before the first frame update
     void Start()
     {
-        
+		Shampoo = GameObject.Find("Shampoo");
     }
 
     // Update is called once per frame
@@ -24,11 +25,20 @@ public class Interact : MonoBehaviour
 		{
 			if (other.transform.tag == "Shower")
 			{
-				//trigger shower event
+				if (Shampoo.GetComponent<Shampoo_Script>().shampoo == true)
+                {
+					other.GetComponent<Shower_Script>().triggerShower();
+				}
+
+                else
+                {
+					other.GetComponent<Shower_Script>().noShampoo();
+                }
+
 			}
 			if (other.transform.tag == "Shampoo")
 			{
-				//trigger shampoo event
+				other.GetComponent<Shampoo_Script>().triggerShampoo();
 			}
 			if (other.transform.tag == "Training")
 			{
@@ -36,19 +46,19 @@ public class Interact : MonoBehaviour
 			}
 			if (other.transform.tag == "Mirror")
 			{
-				//trigger mirror event
+				other.GetComponent<Mirror_Script>().triggerMirror();
 			}
 			if (other.transform.tag == "Protection")
 			{
-				//trigger protection event
+				other.GetComponent<Protection_Script>().triggerProtection();
 			}
 			if (other.transform.tag == "Stink")
 			{
-				//trigger stink event
+				other.GetComponent<Stink_Script>().triggerStink();
 			}
 			if (other.transform.tag == "Puddle")
 			{
-				//trigger puddle event
+				other.GetComponent<Puddle_Script>().triggerPuddle();
 			}
 			if (other.transform.tag == "Food")
 			{

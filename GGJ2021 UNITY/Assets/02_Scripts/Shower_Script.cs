@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class Shower_Script : MonoBehaviour
 {
-
+    //Define Variables
     public Animation Shower_anim;
+    public AudioSource Shower_sound;
+    public GameObject Charm;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Public Function for triggering sound effects and animation.
     public void triggerShower()
     {
+        Debug.Log("Triggered");
         Shower_anim = GetComponent<Animation>();
-
         foreach (AnimationState state in Shower_anim)
         {
-            state.speed = 0.5f;
+            state.speed = 1f;
         }
+
+        Shower_sound.Play();
+
+        //Take charm for successful action
+
+        //Destroy the script so action cant be played twice
+        Destroy(this);
+    }
+
+    public void noShampoo()
+    {
+        Debug.Log("No Shampoo");
+        //More to do here with text on the UI
     }
 }
