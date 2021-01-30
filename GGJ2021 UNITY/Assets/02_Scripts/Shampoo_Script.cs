@@ -18,8 +18,6 @@ public class Shampoo_Script : MonoBehaviour
     //Function for shampoo trigger
     public void triggerShampoo()
     {
-        Debug.Log("Grabbed");
-
         //Set shampoo as being taken
         shampoo = true;
 

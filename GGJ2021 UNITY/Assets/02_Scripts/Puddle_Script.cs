@@ -7,7 +7,7 @@ public class Puddle_Script : MonoBehaviour
     //Define Variables
     public Animation Puddle_anim;
     public AudioSource Puddle_sound;
-    public int charm = 11;
+    public GameObject Dog;
 
     //Public Function for triggering sound effects and animation.
     public void triggerPuddle()
@@ -21,7 +21,8 @@ public class Puddle_Script : MonoBehaviour
         Puddle_sound.Play();
 
         //Take charm for successful action
-        charm -= 4;
+        Dog.GetComponent<StarTracker>().LoseStars();
+
         //Destroy the script so action cant be played twice
         Destroy(this);
     }

@@ -7,7 +7,7 @@ public class Mirror_Script : MonoBehaviour
     //Define Variables
     public Animation Mirror_anim;
     public AudioSource Mirror_sound;
-    public GameObject Charm;
+    public GameObject Player;
 
     //Public Function for triggering sound effects and animation.
     public void triggerMirror()
@@ -20,8 +20,8 @@ public class Mirror_Script : MonoBehaviour
 
         Mirror_sound.Play();
 
-        //Add charm for successful action
-        
+        //Add Stars for successful action
+        Player.GetComponent<StarTracker>().AddStars();
 
         //Destroy the script so action cant be played twice
         Destroy(this);

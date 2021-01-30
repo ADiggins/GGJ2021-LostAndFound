@@ -684,7 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mirror_anim: {fileID: 0}
   Mirror_sound: {fileID: 0}
-  Charm: {fileID: 0}
+  Player: {fileID: 1641892784}
 --- !u!65 &220743086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3115,7 +3115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shower_anim: {fileID: 0}
   Shower_sound: {fileID: 0}
-  Charm: {fileID: 0}
+  Player: {fileID: 1641892784}
 --- !u!65 &914225034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4491,7 +4491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stink_anim: {fileID: 0}
   Stink_sound: {fileID: 0}
-  Charm: {fileID: 0}
+  Player: {fileID: 1641892784}
 --- !u!1 &1435047715
 GameObject:
   m_ObjectHideFlags: 0
@@ -5347,6 +5347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
+--- !u!1 &1641892784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7380888314360924876, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
+  m_PrefabInstance: {fileID: 1641892783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1681296772
 GameObject:
   m_ObjectHideFlags: 0
@@ -5680,7 +5685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stink_anim: {fileID: 0}
   Stink_sound: {fileID: 0}
-  Charm: {fileID: 0}
+  Dog: {fileID: 0}
 --- !u!65 &1816758161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6552,7 +6557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Puddle_anim: {fileID: 0}
   Puddle_sound: {fileID: 0}
-  charm: 11
+  Dog: {fileID: 0}
 --- !u!65 &2031211868
 BoxCollider:
   m_ObjectHideFlags: 0
