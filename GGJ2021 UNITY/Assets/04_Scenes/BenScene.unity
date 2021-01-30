@@ -3696,7 +3696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290258676}
   m_Layer: 0
-  m_Name: TrainingScenery
+  m_Name: TrainingInteraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
