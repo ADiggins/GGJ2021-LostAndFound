@@ -7,6 +7,7 @@ public class Stink_Script : MonoBehaviour
     //Define Variables
     public Animation Stink_anim;
     public AudioSource Stink_sound;
+    public GameObject Marker;
 
     //Public Function for triggering sound effects and animation.
     public void triggerStink()
@@ -27,6 +28,8 @@ public class Stink_Script : MonoBehaviour
 
         //Add charm for successful action
         GetComponent<StarTracker>().LoseStars();
+
+        Marker.GetComponent<Quest_Marker>().disappear();
 
         //Destroy the script so action cant be played twice
         Destroy(this);

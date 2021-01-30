@@ -23,6 +23,9 @@ public class TrainingStateMachine : MonoBehaviour
 
     private Coroutine currentDialougeRoutine;
 
+    //Quest Marker GameObject
+    public GameObject Marker;
+
     private void Awake()
     {
         Initialise();
@@ -76,6 +79,7 @@ public class TrainingStateMachine : MonoBehaviour
         currentDialougeRoutine = StartCoroutine(PopulateDialogue("Well done little skunk! Here is your star"));
         inProgress = false;
         playerStarTracker.AddStars();
+        Marker.GetComponent<Quest_Marker>().disappear();
     }
 
     private void NextInteraction()

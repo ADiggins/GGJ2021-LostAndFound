@@ -8,6 +8,7 @@ public class Protection_Script : MonoBehaviour
     public Animation Stink_anim;
     public AudioSource Stink_sound;
     public GameObject Player;
+    public GameObject Marker;
 
     //Public Function for triggering sound effects and animation.
     public void triggerProtection()
@@ -22,6 +23,8 @@ public class Protection_Script : MonoBehaviour
 
         //Add charm for successful action
         Player.GetComponent<StarTracker>().AddStars();
+
+        Marker.GetComponent<Quest_Marker>().disappear();
 
         //Destroy the script so action cant be played twice
         Destroy(this);

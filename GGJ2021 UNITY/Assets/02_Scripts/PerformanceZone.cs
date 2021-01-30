@@ -6,6 +6,7 @@ public class PerformanceZone : MonoBehaviour
 {
 	public bool triggered = false;
 	public GameObject playerObj;
+	public GameObject Marker;
 
 	public void triggerPerformanceZone()
 	{
@@ -19,5 +20,6 @@ public class PerformanceZone : MonoBehaviour
 	{
 		if (other.transform.tag == "Player")
 			triggerPerformanceZone();
+		Marker.GetComponent<Quest_Marker>().disappear();
 	}
 }

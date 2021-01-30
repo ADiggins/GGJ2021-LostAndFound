@@ -8,6 +8,7 @@ public class Shampoo_Script : MonoBehaviour
     public Animation Shampoo_Anim;
     public AudioSource Shampoo_sound;
     public bool shampoo;
+    public GameObject Marker;
 
 
     private void Start()
@@ -31,5 +32,7 @@ public class Shampoo_Script : MonoBehaviour
 
         //Destory script so only happens once
         GetComponent<BoxCollider>().enabled = false;
+
+        Marker.GetComponent<Quest_Marker>().disappear();
     }
 }

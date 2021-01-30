@@ -9,6 +9,7 @@ public class Shower_Script : MonoBehaviour
     public AudioSource Shower_sound;
     public GameObject Player;
     public GameObject Shampoo;
+    public GameObject Marker;
 
     //Public Function for triggering sound effects and animation.
     public void triggerShower()
@@ -26,6 +27,7 @@ public class Shower_Script : MonoBehaviour
             //Take charm for successful action
             Player.GetComponent<StarTracker>().AddStars();
 
+            Marker.GetComponent<Quest_Marker>().disappear();
             //Destroy the script so action cant be played twice
             Destroy(this);
         }

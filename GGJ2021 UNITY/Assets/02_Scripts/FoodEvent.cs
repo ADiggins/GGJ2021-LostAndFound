@@ -6,6 +6,7 @@ public class FoodEvent : MonoBehaviour
 {
 	public NavMeshMovement targetDog;
 	public bool triggered = false;
+	public GameObject Marker;
 
 	public void TriggerFood()
 	{
@@ -13,5 +14,6 @@ public class FoodEvent : MonoBehaviour
 			return;
 		triggered = true;
 		targetDog.GoToBowl();
+		Marker.GetComponent<Quest_Marker>().disappear();
 	}
 }

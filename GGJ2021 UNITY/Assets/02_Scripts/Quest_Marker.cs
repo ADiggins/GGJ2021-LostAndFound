@@ -42,4 +42,9 @@ public class Quest_Marker : MonoBehaviour
         // Smooth follow.    
         transform.position += (targetPosition - transform.position) * followSharpness;
     }
+
+    public void disappear()
+    {
+        Destroy(this.gameObject);
+    }
 }

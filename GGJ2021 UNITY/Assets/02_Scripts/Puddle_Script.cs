@@ -8,6 +8,7 @@ public class Puddle_Script : MonoBehaviour
     public Animation Puddle_anim;
     public AudioSource Puddle_sound;
     public bool isStuck = false;
+    public GameObject Marker;
 
     //Public Function for triggering sound effects and animation.
     public void triggerPuddle()
@@ -30,6 +31,7 @@ public class Puddle_Script : MonoBehaviour
         {
             other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
             isStuck = true;
+            Marker.GetComponent<Quest_Marker>().disappear();
         }
     }
 }
