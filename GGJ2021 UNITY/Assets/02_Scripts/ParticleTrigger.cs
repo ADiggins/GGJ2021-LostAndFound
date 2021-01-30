@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ParticleTrigger : MonoBehaviour
 {
-	public string content;
-	public float displayed;
 	private ParticleSystem ps;
 
 	private void Awake()

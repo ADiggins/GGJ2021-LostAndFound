@@ -2,26 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StarTracker : MonoBehaviour
-{
-    public float currentStars, maxStars, starWorth;
-    private ParticleTrigger pt;
+public class StarTracker : MonoBehaviour 
+{ 
+	public float currentStars, maxStars, starWorth;
+	private ParticleTrigger pt;
+	private TimedText tt;
 
-    public void Awake()
-    {
-        if (GetComponentInChildren<ParticleTrigger>())
-            pt = GetComponentInChildren<ParticleTrigger>();
-    }
+	public void Awake()
+	{
+		if (GetComponentInChildren<ParticleTrigger>())
+			pt = GetComponentInChildren<ParticleTrigger>();
+		if (GetComponent<TimedText>())
+			tt = GetComponent<TimedText>();
+	}
 
-    public void AddStars()
-    {
-        currentStars += starWorth;
-        if (currentStars > maxStars)
-            currentStars = maxStars;
-        if (pt != null)
-            pt.Fire();
-        //TODO: Trigger progress UI animation
-    }
+	public void AddStars()
+	{
+		currentStars += starWorth;
+		if (currentStars > maxStars)
+			currentStars = maxStars;
+		if (pt != null)
+			pt.Fire();
+		if (tt != null)
+			tt.ShowText("+2", 1.0f);
+		//TODO: Trigger progress UI animation
+	}
 
     public void LoseStars()
     {
