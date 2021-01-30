@@ -721,6 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggered: 0
+  playerObj: {fileID: 0}
 --- !u!4 &241865196
 Transform:
   m_ObjectHideFlags: 0
@@ -6097,6 +6098,7 @@ MonoBehaviour:
   triggered: 0
   dogIn: 0
   dogObj: {fileID: 1009722153}
+  playerObj: {fileID: 0}
 --- !u!4 &1628007373
 Transform:
   m_ObjectHideFlags: 0
@@ -8567,6 +8569,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 285837156422763629, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
+      propertyPath: m_Name
+      value: DizzyStatus
+      objectReference: {fileID: 0}
     - target: {fileID: 285837156539869986, guid: e5428ea0bb3805149a53e9727bd17db0, type: 3}
       propertyPath: starCount
       value: 
