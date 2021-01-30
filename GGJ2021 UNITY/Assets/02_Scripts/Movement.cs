@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
 	private GameObject cameraObj, modelObj;
 	private Quaternion lookRotation;
 	private float xRot, forwardSpeed, sideSpeed;
+	private Vector3 forwardVector;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class Movement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		
+		rb.velocity = forwardVector + (transform.up * rb.velocity.y);
 	}
 
 	// Update is called once per frame
@@ -33,8 +34,8 @@ public class Movement : MonoBehaviour
 		//Object Movement		
 		forwardSpeed = Input.GetAxis("Vertical") * moveSpeed;
 		sideSpeed = Input.GetAxis("Horizontal") * moveSpeed;
-		Vector3 forwardVector = (transform.forward * forwardSpeed) + (transform.right * sideSpeed);
-		rb.velocity = forwardVector + (transform.up * rb.velocity.y);
+		forwardVector = (transform.forward * forwardSpeed) + (transform.right * sideSpeed);
+		
 
 		//Object turning//
 		transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime, 0);
