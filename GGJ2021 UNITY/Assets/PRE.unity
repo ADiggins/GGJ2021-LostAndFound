@@ -1811,6 +1811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KennelCage_V001
       objectReference: {fileID: 0}
+    - target: {fileID: 3661235699826059212, guid: eba19d6de4d1d7144a5220278eb624d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f87eef0a446a004cb1e6ad24e164a7a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eba19d6de4d1d7144a5220278eb624d2, type: 3}
 --- !u!1001 &2752932834582827173
