@@ -7,7 +7,7 @@ public class Puddle_Script : MonoBehaviour
     //Define Variables
     public Animation Puddle_anim;
     public AudioSource Puddle_sound;
-    public GameObject Dog;
+    public bool isStuck = false;
 
     //Public Function for triggering sound effects and animation.
     public void triggerPuddle()
@@ -20,10 +20,16 @@ public class Puddle_Script : MonoBehaviour
 
         Puddle_sound.Play();
 
-        //Take charm for successful action
-        Dog.GetComponent<StarTracker>().LoseStars();
-
         //Destroy the script so action cant be played twice
         Destroy(this);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Ball")
+        {
+            other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+            isStuck = true;
+        }
     }
 }
