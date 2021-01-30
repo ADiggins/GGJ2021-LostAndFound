@@ -36,7 +36,7 @@ public class PromptFollowPlayer : MonoBehaviour
 
     private void Update()
     {
-        transform.position = positionToFollow.transform.position + positionOffset;
+        transform.position = positionToFollow.transform.position + positionToFollow.forward * positionOffset.z + positionToFollow.up * positionOffset.y + positionToFollow.right * positionOffset.x;// positionOffset ;
         transform.rotation = rotationToFollow.transform.rotation;
     }
 }
