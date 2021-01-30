@@ -9,7 +9,8 @@ public class TimedText : MonoBehaviour
 	//public string content;
 	//public float timer;
 
-	private float timeSync;
+	private float timer;
+	private string content;
 
     // Update is called once per frame
     void Update()
@@ -19,8 +20,15 @@ public class TimedText : MonoBehaviour
 
 	public void ShowText(string c, float t)
 	{
-		playerPromptUI.DisplayPrompt(c);
-		Invoke("HideText", t);
+		content = c;
+		timer = t;
+		Invoke("ShowText", 0.1f);
+	}
+
+	public void ShowText()
+	{
+		playerPromptUI.DisplayPrompt(content);
+		Invoke("HideText", timer);
 	}
 
 	public void HideText()
