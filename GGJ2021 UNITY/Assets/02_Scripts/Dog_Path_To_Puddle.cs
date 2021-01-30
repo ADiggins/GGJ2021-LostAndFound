@@ -25,10 +25,11 @@ public class Dog_Path_To_Puddle : MonoBehaviour
         if (Puddle.GetComponent<Puddle_Script>().isStuck == true)
         {
             agent.destination = Puddle.transform.position;
-
-            if (agent.destination == Puddle.transform.position)
+            // When dog reaches destination it is ~2.4 units from puddle
+            if (Vector3.Distance(transform.position, Puddle.transform.position) < 2.5f)
             {
                 GetComponent<StarTracker>().LoseStars();
+                this.enabled = false;
             }
         }
     }

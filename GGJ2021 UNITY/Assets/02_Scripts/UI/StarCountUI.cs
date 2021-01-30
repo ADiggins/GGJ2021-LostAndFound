@@ -16,7 +16,7 @@ public class StarCountUI : MonoBehaviour
 
     private void Update()
     {
-        text.text = ((int)starCount.currentStars).ToString();
+        text.text = ((int)starCount.currentStars).ToString() + "/10";
     }
 
 }

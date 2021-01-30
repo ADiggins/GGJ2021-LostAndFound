@@ -13,15 +13,21 @@ public class Stink_Script : MonoBehaviour
     {
         Debug.Log("Triggered");
         Stink_anim = GetComponent<Animation>();
-        foreach (AnimationState state in Stink_anim)
+        if (Stink_anim != null)
         {
-            state.speed = 1f;
+            foreach (AnimationState state in Stink_anim)
+            {
+                state.speed = 1f;
+            }
         }
 
-        Stink_sound.Play();
+        if (Stink_sound != null)
+        {
+            Stink_sound.Play();
+        }
 
         //Add charm for successful action
-        GetComponent<StarTracker>().LoseStars(); 
+        GetComponent<StarTracker>().LoseStars();
 
         //Destroy the script so action cant be played twice
         Destroy(this);
