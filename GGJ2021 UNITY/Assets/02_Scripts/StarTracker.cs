@@ -23,14 +23,6 @@ public class StarTracker : MonoBehaviour
         //TODO: Trigger progress UI animation
     }
 
-    public void AddStars()
-    {
-        currentStars += starWorth;
-        if (currentStars > maxStars)
-            currentStars = maxStars;
-        //TODO: Trigger progress UI animation
-    }
-
     public void LoseStars()
     {
         currentStars -= starWorth;
