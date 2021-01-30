@@ -31,11 +31,6 @@ public class TrainingStateMachine : MonoBehaviour
         inProgress = false;
     }
 
-    private void Start()
-    {
-        StartTraining();
-    }
-
     public void StartTraining()
     {
         inProgress = true;

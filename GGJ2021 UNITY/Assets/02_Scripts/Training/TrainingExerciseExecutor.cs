@@ -18,7 +18,7 @@ public class TrainingExerciseExecutor : MonoBehaviour
 
     private void Update()
     {
-        if (Failed || Succeeded)
+        if (Failed || Succeeded || exercise == null)
         {
             return;
         }

@@ -17,12 +17,17 @@ public class PromptFollowPlayer : MonoBehaviour
     private Vector3 positionOffset;
 
     /// <summary>
-    /// /// The transform of the object to match rotation with;
+    /// /// The transform of the object to match rotation with. This should be the camera;
     /// </summary>
     [SerializeField]
     private Transform rotationToFollow;
 
     private TMP_Text textUI;
+
+    private void Awake()
+    {
+        textUI = GetComponent<TMP_Text>();
+    }
 
     public void DisplayPrompt(string textToDisplay)
     {
