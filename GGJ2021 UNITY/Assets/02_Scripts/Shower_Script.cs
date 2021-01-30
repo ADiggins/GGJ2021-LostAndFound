@@ -21,7 +21,8 @@ public class Shower_Script : MonoBehaviour
 
         Shower_sound.Play();
 
-        Charm.GetComponent<Charm>().charm += 2;
+        //Take charm for successful action
+
         //Destroy the script so action cant be played twice
         Destroy(this);
     }

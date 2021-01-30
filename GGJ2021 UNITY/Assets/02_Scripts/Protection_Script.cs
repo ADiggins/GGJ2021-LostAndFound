@@ -21,7 +21,7 @@ public class Protection_Script : MonoBehaviour
         Stink_sound.Play();
 
         //Add charm for successful action
-        Charm.GetComponent<Charm>().charm += 2;
+        
         //Destroy the script so action cant be played twice
         Destroy(this);
     }
