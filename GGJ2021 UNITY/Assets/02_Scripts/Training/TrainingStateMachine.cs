@@ -12,6 +12,9 @@ public class TrainingStateMachine : MonoBehaviour
     [SerializeField]
     private TMP_Text text;
 
+    [SerializeField]
+    private StarTracker playerStarTracker;
+
     private TrainingExerciseExecutor executor;
 
     private int currentExerciseIndex = 0;
@@ -72,7 +75,7 @@ public class TrainingStateMachine : MonoBehaviour
         }
         currentDialougeRoutine = StartCoroutine(PopulateDialogue("Well done little skunk! Here is your star"));
         inProgress = false;
-        Debug.Log("Skunk completed training");
+        playerStarTracker.AddStars();
     }
 
     private void NextInteraction()

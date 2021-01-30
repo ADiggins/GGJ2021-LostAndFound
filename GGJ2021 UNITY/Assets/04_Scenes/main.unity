@@ -6728,6 +6728,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 939790282}
+    - target: {fileID: 2845486596946554232, guid: b03e89182446d49418825e6a4c60915b, type: 3}
+      propertyPath: playerStarTracker
+      value: 
+      objectReference: {fileID: 119483340}
     - target: {fileID: 2845486597389219096, guid: b03e89182446d49418825e6a4c60915b, type: 3}
       propertyPath: m_Name
       value: TrainingInteraction
