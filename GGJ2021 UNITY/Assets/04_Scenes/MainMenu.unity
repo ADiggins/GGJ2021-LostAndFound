@@ -980,7 +980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name Goes Here
+  m_text: Good Boy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e1653b0aa7c0434797cad18336c0879, type: 2}
   m_sharedMaterial: {fileID: 2243436552597720449, guid: 6e1653b0aa7c0434797cad18336c0879, type: 2}
