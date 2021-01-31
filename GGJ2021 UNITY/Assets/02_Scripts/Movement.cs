@@ -63,7 +63,7 @@ public class Movement : MonoBehaviour
 
 
 		//Ground Check//
-		if (Physics.Raycast(transform.position, Vector3.down, 1.0f))
+		if (Physics.Raycast(transform.position, Vector3.down, 1.2f))
 			isGrounded = true;
 		else
 			isGrounded = false;
@@ -71,20 +71,22 @@ public class Movement : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
 		{
 			rb.AddForce(0, jumpForce, 0);
+			animCtrl.SetTrigger("Jump");
 		}
 
 		//Audio and animator toggle
 		if (rb.velocity.magnitude > 0 && !runningSource.isPlaying && isGrounded)
 		{
 			runningSource.Play();
-			animCtrl.SetBool("Moving", true);
 		}
 		if (rb.velocity.magnitude <= 0.1 && runningSource.isPlaying)
 		{
 			runningSource.Stop();
-			animCtrl.SetBool("Moving", false);
 		}
-		if (!isGrounded)
+
+		if (rb.velocity.magnitude > 0.1)
+			animCtrl.SetBool("Moving", true);
+		else
 			animCtrl.SetBool("Moving", false);
 
 
