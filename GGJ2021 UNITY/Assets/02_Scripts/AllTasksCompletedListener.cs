@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AllTasksCompletedListener : MonoBehaviour
 {
-
     [SerializeField]
     private StarTracker playerTracker;
 
@@ -37,10 +34,10 @@ public class AllTasksCompletedListener : MonoBehaviour
 
     }
 
-	void Update()
-	{
-		CheckForVictory(0);
-	}
+    void Update()
+    {
+        CheckForVictory(0);
+    }
 
     private void CheckForVictory(int ignored)
     {
