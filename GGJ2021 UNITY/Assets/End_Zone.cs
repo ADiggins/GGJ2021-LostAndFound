@@ -14,11 +14,6 @@ public class End_Zone : MonoBehaviour
             tt = Player.GetComponent<TimedText>();
     }
 
-    private void Start()
-    {
-        tt.ShowText("Test", 1.0f);
-    }
-
     public void Finish()
     {
         if (finished == true)
