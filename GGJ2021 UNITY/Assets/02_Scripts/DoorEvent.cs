@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorEvent : MonoBehaviour
@@ -21,10 +19,6 @@ public class DoorEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (task.Completed)
-        {
-            return;
-        }
         if (triggered)
         {
             yRot = Mathf.Lerp(yRot, 90, 5 * Time.deltaTime);
@@ -41,6 +35,7 @@ public class DoorEvent : MonoBehaviour
         if (dogIn)
         {
             triggered = true;
+            dogObj.GetComponent<NavMeshMovement>().GoToBowl();
             dogObj.GetComponent<StarTracker>().LoseStars();
             task.Completed = true;
         }
