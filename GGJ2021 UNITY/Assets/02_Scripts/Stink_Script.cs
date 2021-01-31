@@ -7,6 +7,7 @@ public class Stink_Script : MonoBehaviour
     public AudioSource Stink_sound;
     public GameObject Marker;
     public CompletedTask task;
+    public ParticleSystem VFX;
 
     //Public Function for triggering sound effects and animation.
     public void triggerStink()
@@ -25,6 +26,11 @@ public class Stink_Script : MonoBehaviour
             if (Stink_sound != null)
             {
                 Stink_sound.Play();
+            }
+
+            if (VFX != null)
+            {
+                VFX.Play();
             }
 
             //Add charm for successful action

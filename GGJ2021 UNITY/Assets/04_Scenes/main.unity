@@ -6174,6 +6174,7 @@ MonoBehaviour:
   Stink_sound: {fileID: 0}
   Marker: {fileID: 1320627102}
   task: {fileID: 11400000, guid: 029a4bd0c56af00498ccae9497937ff0, type: 2}
+  VFX: {fileID: 1726789073}
 --- !u!65 &1225814704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9546,9 +9547,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7652008699462396458, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3771261872297025682, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
+--- !u!198 &1726789073 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7652008699462396458, guid: d205b6e73e036304b963d98ccb4f145d, type: 3}
+  m_PrefabInstance: {fileID: 1726789072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1734832485
 PrefabInstance:
   m_ObjectHideFlags: 0
