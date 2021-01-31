@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Mirror_Script : MonoBehaviour
@@ -10,23 +8,26 @@ public class Mirror_Script : MonoBehaviour
     public GameObject Player;
     public GameObject Marker;
 
+    public CompletedTask task;
+
     //Public Function for triggering sound effects and animation.
     public void triggerMirror()
     {
-        //Mirror_anim = GetComponent<Animation>();
-        //foreach (AnimationState state in Mirror_anim)
-        //{
-        //    state.speed = 1f;
-        //}
+        if (!task.Completed)
+        {
+            //Mirror_anim = GetComponent<Animation>();
+            //foreach (AnimationState state in Mirror_anim)
+            //{
+            //    state.speed = 1f;
+            //}
 
-        //Mirror_sound.Play();
+            //Mirror_sound.Play();
 
-        //Add Stars for successful action
-        Player.GetComponent<StarTracker>().AddStars();
+            //Add Stars for successful action
+            Player.GetComponent<StarTracker>().AddStars();
 
-        Marker.GetComponent<Quest_Marker>().disappear();
-
-        //Destroy the script so action cant be played twice
-        Destroy(this);
+            Marker.GetComponent<Quest_Marker>().disappear();
+            task.Completed = true;
+        }
     }
 }
