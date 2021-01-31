@@ -10833,6 +10833,7 @@ MonoBehaviour:
   borisStarVictoryCount: 9
   edwinaStarVictoryCount: 9
   dizzyStarVictoryCount: 9
+  playerPrompt: {fileID: 1330261569}
   Victory: {fileID: 1634281676}
 --- !u!4 &1902797032
 Transform:

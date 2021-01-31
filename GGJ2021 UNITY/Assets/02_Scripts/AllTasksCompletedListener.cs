@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AllTasksCompletedListener : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class AllTasksCompletedListener : MonoBehaviour
 
     [SerializeField]
     private int dizzyStarVictoryCount;
+
+    [SerializeField]
+    private PromptFollowPlayer playerPrompt;
 
     //Gameobject for activating victory
     public GameObject Victory;
@@ -55,6 +59,13 @@ public class AllTasksCompletedListener : MonoBehaviour
     private void DoVictory()
     {
         Victory.GetComponent<End_Zone>().finished = true;
+        playerPrompt.DisplayPrompt("Who's a good boy, you're ready to be adopted. Go see the manager in the office");
     }
 
+    private IEnumerator DispelVictory()
+    {
+        yield return new WaitForSeconds(2);
+
+        playerPrompt.Clear();
+    }
 }
