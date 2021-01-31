@@ -4,6 +4,9 @@ using UnityEngine.Events;
 public class InteractionTrigger : MonoBehaviour
 {
     [SerializeField]
+    private CompletedTask task;
+
+    [SerializeField]
     private PromptFollowPlayer playerPromptUI;
 
     [SerializeField]
@@ -15,22 +18,22 @@ public class InteractionTrigger : MonoBehaviour
     [SerializeField]
     private UnityEvent unityEvent;
 
-	[SerializeField]
-	private AudioSource audioSource;
+    [SerializeField]
+    private AudioSource audioSource;
 
 
     private bool isPlayerInTrigger = false;
 
 
-	private void Awake()
-	{
-		if (GetComponent<AudioSource>() && audioSource == null)
-			audioSource = GetComponent<AudioSource>();
-	}
-
-	private void OnTriggerEnter(Collider other)
+    private void Awake()
     {
-        if (isPlayerInTrigger)
+        if (GetComponent<AudioSource>() && audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isPlayerInTrigger || task.Completed)
         {
             return;
         }
@@ -52,14 +55,14 @@ public class InteractionTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInTrigger)
+        if (isPlayerInTrigger && !task.Completed)
         {
             if (Input.GetKeyDown(interactKeyCode))
             {
                 unityEvent.Invoke();
                 playerPromptUI.Clear();
-				if (audioSource != null)
-					audioSource.Play();
+                if (audioSource != null)
+                    audioSource.Play();
             }
         }
     }
