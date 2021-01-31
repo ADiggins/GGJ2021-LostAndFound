@@ -45,6 +45,6 @@ public class Quest_Marker : MonoBehaviour
 
     public void disappear()
     {
-        Destroy(this.gameObject);
+		this.gameObject.SetActive(false);
     }
 }
