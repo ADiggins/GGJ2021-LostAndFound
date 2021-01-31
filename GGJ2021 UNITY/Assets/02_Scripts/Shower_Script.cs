@@ -22,7 +22,7 @@ public class Shower_Script : MonoBehaviour
             //   state.speed = 1f;
             //}
 
-            //Shower_sound.Play();
+            Shower_sound.Play();
 
             //Take charm for successful action
             Player.GetComponent<StarTracker>().AddStars();
@@ -34,8 +34,7 @@ public class Shower_Script : MonoBehaviour
 
         else
         {
-            Debug.Log("No Shampoo");
-            //More to do here with text on the UI
+			Player.GetComponent<TimedText>().ShowText("No Shampoo", 2.0f);
         }
     }
 }

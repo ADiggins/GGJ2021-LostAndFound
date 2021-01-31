@@ -37,7 +37,7 @@ public class DoorEvent : MonoBehaviour
 			dogObj.GetComponent<StarTracker>().LoseStars();
 		}
 		else
-			print("Get the dog inside first!");
+			playerObj.GetComponent<TimedText>().ShowText("Get the dog inside first!", 2.0f);
 		
 	}
 

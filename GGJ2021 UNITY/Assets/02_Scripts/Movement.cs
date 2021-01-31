@@ -6,17 +6,23 @@ public class Movement : MonoBehaviour
 {
 	public float moveSpeed, jumpForce, sensitivity;
 	public float cameraClampMin, cameraClampMax;
+	public bool isGrounded = true;
+	public AudioSource runningSource;
 
 	private Rigidbody rb;
 	private GameObject cameraObj, modelObj;
 	private Quaternion lookRotation;
 	private float xRot, forwardSpeed, sideSpeed;
 	private Vector3 forwardVector;
+	
 
-    // Start is called before the first frame update
-    void Start()
-    {
+	private void Awake()
+	{
 		rb = GetComponent<Rigidbody>();
+	}
+	// Start is called before the first frame update
+	void Start()
+    {		
 		cameraObj = Camera.main.gameObject;
 		modelObj = transform.Find("Skunk Model").gameObject;
 		Cursor.lockState = CursorLockMode.Locked;
@@ -52,11 +58,24 @@ public class Movement : MonoBehaviour
 			lookRotation = Quaternion.LookRotation(forwardVector);
 		modelObj.transform.rotation = Quaternion.Slerp(modelObj.transform.rotation, lookRotation, 5 * Time.deltaTime);
 
+
+		//Ground Check//
+		if (Physics.Raycast(transform.position, Vector3.down, 1.0f))
+			isGrounded = true;
+		else
+			isGrounded = false;
 		//jumping//
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
 		{
-			if (Physics.Raycast(transform.position, Vector3.down, 1.0f))
-				rb.AddForce(0, jumpForce, 0);
+			rb.AddForce(0, jumpForce, 0);
 		}
+
+		//Audio toggle
+		if (rb.velocity.magnitude > 0 && !runningSource.isPlaying && isGrounded)
+		{
+			runningSource.Play();
+		}
+		if (rb.velocity.magnitude <= 0.1 && runningSource.isPlaying)
+			runningSource.Stop();
 	}
 }

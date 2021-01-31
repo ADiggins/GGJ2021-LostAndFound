@@ -15,10 +15,20 @@ public class InteractionTrigger : MonoBehaviour
     [SerializeField]
     private UnityEvent unityEvent;
 
+	[SerializeField]
+	private AudioSource audioSource;
+
 
     private bool isPlayerInTrigger = false;
 
-    private void OnTriggerEnter(Collider other)
+
+	private void Awake()
+	{
+		if (GetComponent<AudioSource>() && audioSource == null)
+			audioSource = GetComponent<AudioSource>();
+	}
+
+	private void OnTriggerEnter(Collider other)
     {
         if (isPlayerInTrigger)
         {
@@ -48,6 +58,8 @@ public class InteractionTrigger : MonoBehaviour
             {
                 unityEvent.Invoke();
                 playerPromptUI.Clear();
+				if (audioSource != null)
+					audioSource.Play();
             }
         }
     }

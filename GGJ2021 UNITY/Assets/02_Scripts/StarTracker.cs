@@ -6,6 +6,8 @@ public class StarTracker : MonoBehaviour
     public Action<int> OnStarValueChange;
 
     public float currentStars, maxStars, starWorth;
+	public AudioSource ac;
+
     private ParticleTrigger pt;
     private TimedText tt;
 
@@ -15,7 +17,9 @@ public class StarTracker : MonoBehaviour
             pt = GetComponentInChildren<ParticleTrigger>();
         if (GetComponent<TimedText>())
             tt = GetComponent<TimedText>();
-    }
+		if (GetComponent<AudioSource>() && ac==null)
+			ac = GetComponent<AudioSource>();
+	}
 
     public void AddStars()
     {
@@ -26,6 +30,7 @@ public class StarTracker : MonoBehaviour
             pt.Fire();
         if (tt != null)
             tt.ShowText("+2", 1.0f);
+		ac.Play();
 
         OnStarValueChange?.Invoke((int)currentStars);
         //TODO: Trigger progress UI animation
@@ -36,8 +41,9 @@ public class StarTracker : MonoBehaviour
         currentStars -= starWorth;
         if (currentStars < 0)
             currentStars = 0;
+		ac.Play();
 
-        OnStarValueChange?.Invoke((int)currentStars);
+		OnStarValueChange?.Invoke((int)currentStars);
         //TODO: Trigger progress UI animation
     }
 }
