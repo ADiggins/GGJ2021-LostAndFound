@@ -60,6 +60,7 @@ public class AllTasksCompletedListener : MonoBehaviour
     {
         Victory.GetComponent<End_Zone>().finished = true;
         playerPrompt.DisplayPrompt("Who's a good boy, you're ready to be adopted. Go see the manager in the office");
+        StartCoroutine(DispelVictory());
     }
 
     private IEnumerator DispelVictory()
