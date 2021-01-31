@@ -8,6 +8,8 @@ public class End_Zone : MonoBehaviour
     public GameObject Player;
     private TimedText tt;
 
+    public Animator endGameAnimator;
+
     private void Awake()
     {
         if (Player.GetComponent<TimedText>())
@@ -18,10 +20,7 @@ public class End_Zone : MonoBehaviour
     {
         if (finished == true)
         {
-            if (tt != null)
-            {
-                tt.ShowText("Congradulations, you have been successfully adopted", 5.0f);
-            }
+            endGameAnimator.SetTrigger("End");
         }
 
         else
