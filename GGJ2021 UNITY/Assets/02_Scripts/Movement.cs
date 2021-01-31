@@ -14,12 +14,15 @@ public class Movement : MonoBehaviour
 	private Quaternion lookRotation;
 	private float xRot, forwardSpeed, sideSpeed;
 	private Vector3 forwardVector;
+	private Animator animCtrl;
 	
 
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody>();
+		animCtrl = GetComponentInChildren<Animator>();
 	}
+
 	// Start is called before the first frame update
 	void Start()
     {		
@@ -70,12 +73,21 @@ public class Movement : MonoBehaviour
 			rb.AddForce(0, jumpForce, 0);
 		}
 
-		//Audio toggle
+		//Audio and animator toggle
 		if (rb.velocity.magnitude > 0 && !runningSource.isPlaying && isGrounded)
 		{
 			runningSource.Play();
+			animCtrl.SetBool("Moving", true);
 		}
 		if (rb.velocity.magnitude <= 0.1 && runningSource.isPlaying)
+		{
 			runningSource.Stop();
+			animCtrl.SetBool("Moving", false);
+		}
+		if (!isGrounded)
+			animCtrl.SetBool("Moving", false);
+
+
+
 	}
 }

@@ -34,6 +34,7 @@ public class DoorEvent : MonoBehaviour
 		if (dogIn)
 		{
 			triggered = true;
+			dogObj.GetComponent<NavMeshMovement>().GoToBowl();
 			dogObj.GetComponent<StarTracker>().LoseStars();
 		}
 		else
