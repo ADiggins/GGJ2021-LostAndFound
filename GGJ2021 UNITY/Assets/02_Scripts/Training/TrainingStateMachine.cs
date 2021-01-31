@@ -5,6 +5,8 @@ using TMPro;
 [RequireComponent(typeof(TrainingExerciseExecutor))]
 public class TrainingStateMachine : MonoBehaviour
 {
+    [SerializeField]
+    private CompletedTask task;
 
     [SerializeField]
     private TrainingExercise[] exercises;
@@ -39,9 +41,12 @@ public class TrainingStateMachine : MonoBehaviour
 
     public void StartTraining()
     {
-        inProgress = true;
-        currentExerciseIndex = 0;
-        NextInteraction();
+        if (!task.Completed)
+        {
+            inProgress = true;
+            currentExerciseIndex = 0;
+            NextInteraction();
+        }
     }
 
     private void Update()
@@ -80,6 +85,7 @@ public class TrainingStateMachine : MonoBehaviour
         inProgress = false;
         playerStarTracker.AddStars();
         Marker.GetComponent<Quest_Marker>().disappear();
+        task.Completed = true;
     }
 
     private void NextInteraction()

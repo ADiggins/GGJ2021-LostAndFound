@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shower_Script : MonoBehaviour
@@ -11,9 +9,16 @@ public class Shower_Script : MonoBehaviour
     public GameObject Shampoo;
     public GameObject Marker;
 
+    public CompletedTask task;
+
     //Public Function for triggering sound effects and animation.
     public void triggerShower()
     {
+        if (task.Completed)
+        {
+            return;
+        }
+
         if (Shampoo.GetComponent<Shampoo_Script>().shampoo == true)
         {
             //Shower_anim = GetComponent<Animation>();
@@ -28,13 +33,12 @@ public class Shower_Script : MonoBehaviour
             Player.GetComponent<StarTracker>().AddStars();
 
             Marker.GetComponent<Quest_Marker>().disappear();
-            //Destroy the script so action cant be played twice
-            Destroy(this);
+            task.Completed = true;
         }
 
         else
         {
-			Player.GetComponent<TimedText>().ShowText("No Shampoo", 2.0f);
+            Player.GetComponent<TimedText>().ShowText("You can't shower without shampoo!", 2.0f);
         }
     }
 }

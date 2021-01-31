@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Puddle_Script : MonoBehaviour
@@ -10,19 +8,22 @@ public class Puddle_Script : MonoBehaviour
     public bool isStuck = false;
     public GameObject Marker;
 
+    public CompletedTask task;
+
     //Public Function for triggering sound effects and animation.
     public void triggerPuddle()
     {
-        //Puddle_anim = GetComponent<Animation>();
-        //foreach (AnimationState state in Puddle_anim)
-        //{
-        //    state.speed = 1f;
-        //}
+        if (!task.Completed)
+        {
+            //Puddle_anim = GetComponent<Animation>();
+            //foreach (AnimationState state in Puddle_anim)
+            //{
+            //    state.speed = 1f;
+            //}
 
-        //Puddle_sound.Play();
-
-        //Destroy the script so action cant be played twice
-        Destroy(this);
+            //Puddle_sound.Play();
+            task.Completed = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
